@@ -28,10 +28,37 @@
                 <p class="sr-only ">45deg</p>
                 <div class="wind__arrow"></div>
             </div>
+
+            <div class="unit">
+                <label for="cel">°C</label>
+                <input type="radio" id="cel" name="unit" checked>
+                <button class="unit__toggle"></button>
+                <label for="fah">°F</label>
+                <input type="radio" id="fah" name="unit">
+            </div>
         </div>
 
-        
     </main>
-    <div class="forecast"></div>
+
+    <div class="previous-weather">
+        <label for="weather-togle" class="show-previous-weather-label" &#8593;>
+            <span class="sr-only">Show previous weather</span>
+        </label>
+
+        <input type="checkbox" id="weather-toggle" class="show-previous-weather-toggle">
+       
+        <h2 class="main-title">Previous 7 days</h2>
+    
+        <div class="previous-days">
+            <div class="previous-day">
+                <h3 class="previous-day__sol">Sol 262</h3>
+                <p class="previous-day__date">September 14</p>
+                <p class="previous-day__temp">High: -20</p>
+                <p class="previous-day__temp">Low: -120</p>
+                <button class="previous-day__more-info">more info</button>
+            </div>
+        </div>
+    
+    </div>
 </body>
 </html>
