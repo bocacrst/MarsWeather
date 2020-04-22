@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fs-h1: 1.25rem;
+    --fs-h2: 1.75rem;
+    --fs-body: 1rem;
+    --fs-xl: 3rem;
+    --clr-light: #ECE4D7;
+    --clr-dark: #2B1E1A;
+    --clr-accent: #BE5000;
+}
+.sr-only:not(:focus):not(:active){
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+body{
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.6;
+    background-image: url(../img/Mars.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+   // overflow: hidden;
+    color:  var(--clr-light);
+}
+.mars-current-weather{
+    background-color: rgba(43, 30, 26, 0.8) ;
+    padding: 2em;
+    max-width: 1000px;
+    margin:2em 4em;
+}
+.main-title-2{
+    font-family: 'Fugaz One',sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 200%;
+    margin: 0;
+    left: -111px;
+    bottom: -20px;
+    font-weight: 500;
+}
+.main-title-1{
+    font-family: 'Monoton',sans-serif;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    font-size: 650%;
+   // letter-spacing: 0.24em;
+    color: var(--clr-accent);
+    font-weight: 400;
+    bottom: -20px;
+}
+h1, h2, h3{
+   
+    line-height: 1;
+}
+.section-title{
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    margin: 0;
+}
