@@ -37,7 +37,15 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  overflow: hidden;
   color: var(--clr-light);
+}
+
+.main-screen {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .mars-current-weather {
@@ -47,8 +55,8 @@ body {
   margin: 2em 4em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr;
 }
 
 .main-title-2 {

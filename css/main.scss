@@ -33,8 +33,12 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
-   // overflow: hidden;
+    overflow: hidden;
     color:  var(--clr-light);
+}
+.main-screen{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .mars-current-weather{
     background-color: rgba(43, 30, 26, 0.8) ;
@@ -42,7 +46,8 @@ body{
     max-width: 1000px;
     margin:2em 4em;
     display: grid;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: 1fr 2fr 2fr;
+    
 }
 .main-title-2{
     font-family: 'Fugaz One',sans-serif;
