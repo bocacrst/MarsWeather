@@ -45,6 +45,10 @@ body {
   padding: 2em;
   max-width: 1000px;
   margin: 2em 4em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
 .main-title-2 {

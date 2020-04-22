@@ -41,6 +41,8 @@ body{
     padding: 2em;
     max-width: 1000px;
     margin:2em 4em;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
 }
 .main-title-2{
     font-family: 'Fugaz One',sans-serif;
