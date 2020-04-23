@@ -11,7 +11,7 @@
     --fs-h1: 1.25rem;
     --fs-h2: 1.75rem;
     --fs-body: 1rem;
-    --fs-xl: 3rem;
+    --fs-xl: 2.5rem;
     --clr-light: #ECE4D7;
     --clr-dark: #2B1E1A;
     --clr-accent: #BE5000;
@@ -38,16 +38,22 @@ body{
 }
 .main-screen{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    grid-template-columns: 0.7fr 1fr;
+    top: -100px;
+    
 }
 .mars-current-weather{
     background-color: rgba(43, 30, 26, 0.8) ;
     padding: 2em;
     max-width: 1000px;
-    margin:2em 4em;
+    margin:0 0 0 10em;
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr;
-    
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-columns:1fr 0.5fr ;
+    gap: 0.5em;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px #000000a2;
 }
 .main-title-2{
     font-family: 'Fugaz One',sans-serif;
@@ -74,8 +80,71 @@ h1, h2, h3{
    
     line-height: 1;
 }
+.reading{
+    font-size: 160%;
+    font-weight: var(--fw-light);
+    margin: 0;
+    opacity: 0.8;
+}
 .section-title{
     font-size: var(--fs-xl);
     font-weight: var(--fw-bold);
     margin: 0;
+}
+.date{
+    grid-row: 1/-4;
+
+    &__day{
+        font-size: 160%;
+        font-weight: var(--fw-light);
+        margin: 0;
+        opacity: 0.8;
+    }
+}
+.temp{
+    --border: solid 2px var(--clr-accent);
+    grid-row: 2/-3;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 10px 0 ;
+}
+.wind{
+    grid-row: 3/-2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__direction{
+        --size: 60px;
+       // float: right;
+        width: var(--size);
+        height: var(--size);
+        background-color: var(--clr-light);
+        opacity: 0.9;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    &__arrow{
+        --direction: 0deg;
+        --size: 10px;
+        height: calc(var(--size)*3);
+        width: var(--size);
+        background-color: var(--clr-accent);
+        clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+        transform: translateY(-50%) rotate(var(--direction));
+        transform-origin: bottom center;
+    }
+}
+.unit{
+    grid-column:2/3 ;
+    grid-row: 3/4;
+}
+.icon{
+    fill: var(--clr-light);
+    position: relative;
+    left: 120px;
+    top: -33px;
+    height: 170px;
+
 }
