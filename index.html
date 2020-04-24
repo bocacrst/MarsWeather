@@ -21,11 +21,21 @@
             <div class="date">
                 <h2 class="section-title section-title--date">Sol 269</h2>
                 <p class="date__day">September 21</p>
+               
             </div>
             <div class="temp">
                 <h2 class="section-title section-title--temp">Temperature</h2>
-                <p class="reading">High: -20 °C</p>
-                <p class="reading">Low: -120 °C</p>
+                <p class="reading reading_high">High: -20 °C</p>
+                <p class="reading reading_low">Low: -120 °C</p>
+            
+                <div class="unit">
+                    <label for="cel">°C</label>
+                    <input type="radio" id="cel" name="unit" checked>
+                    <button class="unit__toggle"></button>
+                    <label for="fah">°F</label>
+                    <input type="radio" id="fah" name="unit">
+                </div>
+
             </div>
             <div class="wind">
                 <h2 class="section-title section-title--wind">Wind</h2>
@@ -36,13 +46,7 @@
                     <div class="wind__arrow"></div>
                 </div>
             </div>
-            <div class="unit">
-                <label for="cel">°C</label>
-                <input type="radio" id="cel" name="unit" checked>
-                <button class="unit__toggle"></button>
-                <label for="fah">°F</label>
-                <input type="radio" id="fah" name="unit">
-            </div>
+           
         </div>
     </main>
 
