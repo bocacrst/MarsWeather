@@ -113,9 +113,14 @@ h1, h2, h3{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    .section-title,
+    .reading{
+        grid-column: 1/2;
+
+    }
+
     &__direction{
         --size: 60px;
-       // float: right;
         width: var(--size);
         height: var(--size);
         background-color: var(--clr-light);
@@ -123,6 +128,10 @@ h1, h2, h3{
         border-radius: 50%;
         display: grid;
         place-items: center;
+        grid-column: 2/3;
+        grid-row: -1/span 2;
+        margin: 10px 0 0 20px;
+        box-shadow: inset -3px 3px 3px #0000008c;
     }
 
     &__arrow{
@@ -134,6 +143,7 @@ h1, h2, h3{
         clip-path: polygon(50% 0%, 0 100%, 100% 100%);
         transform: translateY(-50%) rotate(var(--direction));
         transform-origin: bottom center;
+        box-shadow: 10px 10px 10px #0000008c;
     }
 }
 .unit{
@@ -146,5 +156,6 @@ h1, h2, h3{
     left: 120px;
     top: -33px;
     height: 170px;
+    
 
 }
