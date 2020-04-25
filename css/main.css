@@ -200,7 +200,7 @@ h1, h2, h3 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   place-self: end;
   color: var(--clr-light);
   display: -webkit-box;
@@ -256,5 +256,33 @@ h1, h2, h3 {
   left: 120px;
   top: -33px;
   height: 170px;
+}
+
+.previous-weather {
+  background-color: rgba(236, 228, 215, 0.9);
+  color: #2B1E1A;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(95%);
+          transform: translateY(95%);
+}
+
+.show-previous-weather-label {
+  position: absolute;
+  background: green;
+  color: var(--clr-dark);
+  width: 10rem;
+  height: 1.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+.previous-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
