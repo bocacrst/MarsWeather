@@ -342,6 +342,8 @@ h1, h2, h3 {
   text-align: center;
   margin: 0 0 30px 0;
   color: var(--clr-accent);
+  -webkit-animation: slideUpIn 750ms forwards;
+          animation: slideUpIn 750ms forwards;
 }
 
 .show-weather.previous-weather {
@@ -407,8 +409,8 @@ h1, h2, h3 {
 }
 
 .show-weather.previous-weather .previous-day:nth-child(7) {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
 }
 
 @-webkit-keyframes slideUpIn {
