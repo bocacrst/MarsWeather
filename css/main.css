@@ -232,7 +232,7 @@ h1, h2, h3 {
   background: transparent;
   padding: 0;
   border-radius: 100vmax;
-  margin: 3px 7px;
+  margin: 5px 7px;
 }
 
 .unit__toggle::after {
@@ -241,7 +241,7 @@ h1, h2, h3 {
   background-color: var(--clr-light);
   border-radius: 50%;
   height: 10px;
-  margin: 2px;
+  margin: 2px 2px 2px 1px;
   margin-left: auto;
   width: 10px;
 }
@@ -250,7 +250,7 @@ h1, h2, h3 {
   margin-left: 2px;
 }
 
-.icon {
+.icon_sun {
   fill: var(--clr-light);
   position: relative;
   left: 120px;
@@ -259,30 +259,181 @@ h1, h2, h3 {
 }
 
 .previous-weather {
-  background-color: rgba(236, 228, 215, 0.9);
-  color: #2B1E1A;
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   bottom: 0;
   width: 100%;
-  -webkit-transform: translateY(95%);
-          transform: translateY(95%);
+  -webkit-transform: translateY(80%);
+          transform: translateY(80%);
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+  padding: 20px 40px 40px 40px;
 }
 
-.show-previous-weather-label {
+.show-previous-weather-button {
   position: absolute;
-  background: green;
-  color: var(--clr-dark);
+  background: rgba(255, 255, 255, 0.9);
   width: 10rem;
   height: 1.5rem;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-align: center;
+  -webkit-transform: translate(-50%, calc(-98% - 20px));
+          transform: translate(-50%, calc(-98% - 20px));
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+  cursor: pointer;
+  border: 0;
+}
+
+.show-previous-weather-button .arrow_icon {
+  fill: var(--clr-accent);
+  position: relative;
+  height: 50px;
+  -webkit-transform: translateX(3%) rotate(0);
+          transform: translateX(3%) rotate(0);
+}
+
+.show-previous-weather-button .arrow_icon:hover, .show-previous-weather-button .arrow_icon:focus {
+  fill: #973f00;
+  -webkit-transition: fill 200ms ease;
+  transition: fill 200ms ease;
 }
 
 .previous-days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--clr-dark);
+}
+
+.previous-day {
+  opacity: 0;
+}
+
+.previous-day > * {
+  margin: 0;
+}
+
+.previous-day__more-info {
+  cursor: pointer;
+  border-radius: 100vmax;
+  border: 0;
+  background: #BE5000;
+  color: white;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  font-size: 70%;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+  margin-top: 10px;
+}
+
+.previous-day__more-info:hover {
+  background: #973f00;
+}
+
+.previous-weather__title {
+  font-family: 'Fugaz One',sans-serif;
+  text-align: center;
+  margin: 0 0 30px 0;
+  color: var(--clr-accent);
+}
+
+.show-weather.previous-weather {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.show-weather.previous-weather .arrow_icon {
+  -webkit-transform: rotate(180deg) translateY(25px);
+          transform: rotate(180deg) translateY(25px);
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+}
+
+.show-weather.previous-weather .previous-weather__title,
+.show-weather.previous-weather .previous-day {
+  -webkit-animation: slideUpIn 750ms forwards;
+          animation: slideUpIn 750ms forwards;
+}
+
+.show-weather.previous-weather .previous-weather__title {
+  text-align: left;
+}
+
+.show-weather.previous-weather .previous-weather__title::after {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 222px;
+  background-color: var(--clr-accent);
+}
+
+.show-weather.previous-weather .previous-day:nth-child(1) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(2) {
+  -webkit-animation-delay: 125ms;
+          animation-delay: 125ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(3) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(4) {
+  -webkit-animation-delay: 175ms;
+          animation-delay: 175ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(5) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(6) {
+  -webkit-animation-delay: 225ms;
+          animation-delay: 225ms;
+}
+
+.show-weather.previous-weather .previous-day:nth-child(7) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+
+@-webkit-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=main.css.map */
