@@ -157,6 +157,8 @@ h1, h2, h3{
         transform: translateY(-50%) rotate(var(--direction));
         transform-origin: bottom center;
         box-shadow: 10px 10px 10px #0000008c;
+        transition: transform 700ms ease;
+        
     }
 }
 .unit{

@@ -191,6 +191,10 @@ h1, h2, h3 {
           transform-origin: bottom center;
   -webkit-box-shadow: 10px 10px 10px #0000008c;
           box-shadow: 10px 10px 10px #0000008c;
+  -webkit-transition: -webkit-transform 700ms ease;
+  transition: -webkit-transform 700ms ease;
+  transition: transform 700ms ease;
+  transition: transform 700ms ease, -webkit-transform 700ms ease;
 }
 
 .unit {
