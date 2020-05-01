@@ -264,6 +264,8 @@ h1, h2, h3{
 
     & > *{margin: 0;}
 
+    .previous-day__date{font-weight: var(--fw-light);}
+
     &__more-info{
         cursor: pointer;
         border-radius: 100vmax;
@@ -274,7 +276,7 @@ h1, h2, h3{
         text-transform: uppercase;
         font-size: 70%;
         transition: background 250ms ease;
-        margin-top:10px;
+        margin:10px 0px 0 -8px;
 
         &:hover{
             background: #973f00;

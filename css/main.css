@@ -323,6 +323,10 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.previous-day .previous-day__date {
+  font-weight: var(--fw-light);
+}
+
 .previous-day__more-info {
   cursor: pointer;
   border-radius: 100vmax;
@@ -334,7 +338,7 @@ h1, h2, h3 {
   font-size: 70%;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
-  margin-top: 10px;
+  margin: 10px 0px 0 -8px;
 }
 
 .previous-day__more-info:hover {

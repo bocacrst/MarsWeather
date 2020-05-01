@@ -28,12 +28,12 @@
                 <p class="reading reading_high">
                     High:
                     <span data-current-temp-high></span> 
-                    °C
+                    °<span data-temp-unit></span>
                 </p>
                 <p class="reading reading_low">
                     Low: 
                     <span data-current-temp-low></span> 
-                     °C
+                     °<span data-temp-unit></span>
                     </p>
             
                 <div class="unit">
@@ -48,7 +48,8 @@
             <div class="wind">
                 <h2 class="section-title section-title--wind">Wind</h2>
                 <p class="reading">
-                    <span data-wind-speed></span> km/h
+                    <span data-wind-speed></span> 
+                    <span data-speed-unit></span> 
                 </p>
 
                 <div class="wind__direction">
@@ -81,12 +82,14 @@
                 <p class="previous-day__temp">
                     High: 
                     <span data-temp-high></span>
+                    °<span data-temp-unit></span>
                 </p>
                 <p class="previous-day__temp">
                     Low: 
                     <span data-temp-low></span>
+                    °<span data-temp-unit></span>
                 </p>
-                <button class="previous-day__more-info">more info</button>
+                <button class="previous-day__more-info" data-select-button>more info</button>
             </div>
         </template>
     
