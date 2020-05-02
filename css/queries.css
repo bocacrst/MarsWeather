@@ -1,0 +1,69 @@
+@media (min-width: 900px) {
+  :root {
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fs-h1: 1.25rem;
+    --fs-h2: 1.75rem;
+    --fs-body: 1rem;
+    --fs-xl: 2.5rem;
+  }
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .main-title-1 {
+    font-size: 810%;
+    bottom: -35px;
+  }
+  .main-title-2 {
+    font-size: 250%;
+    left: -140px;
+    bottom: -40px;
+  }
+  .icon_sun {
+    left: 120px;
+    top: 6px;
+    height: 170px;
+  }
+  .main-screen {
+    display: -ms-grid;
+    display: grid;
+    top: -60px;
+    -ms-grid-columns: 0.5fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
+  }
+  .mars-current-weather {
+    padding: 2em;
+    margin: 0 0 0 10em;
+    gap: 1em;
+  }
+  .previous-days {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+    -ms-grid-rows: none;
+        grid-template-rows: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .previous-weather {
+    -webkit-transform: translateY(80%);
+            transform: translateY(80%);
+  }
+  .show-weather.previous-weather .previous-weather__title {
+    display: block;
+    text-align: left;
+  }
+  .show-weather.previous-weather .previous-weather__title::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 222px;
+    background-color: var(--clr-accent);
+  }
+}
+/*# sourceMappingURL=queries.css.map */
