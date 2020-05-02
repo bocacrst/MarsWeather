@@ -258,7 +258,7 @@ h1, h2, h3 {
 }
 
 .previous-weather {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -273,7 +273,7 @@ h1, h2, h3 {
 
 .show-previous-weather-button {
   position: absolute;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   width: 10rem;
   height: 1.5rem;
   left: 50%;
@@ -311,9 +311,12 @@ h1, h2, h3 {
 }
 
 .previous-day {
+  background-color: rgba(90, 38, 1, 0.2);
+  border-radius: 10px;
   opacity: 0;
   text-align: center;
-  padding: 5px;
+  margin: 5px;
+  padding: 5px 0 5px 0;
 }
 
 .previous-day > * {

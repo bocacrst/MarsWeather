@@ -45,10 +45,19 @@
         grid-template-columns: none;
         grid-template-rows: none;
         justify-content: space-between;
-        
+    }
+    .previous-day{
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        text-align: left;
     }
     .previous-weather{
+        background-color:rgba(255, 255, 255, 0.9);
         transform: translateY(80%);
+    }
+    .show-previous-weather-button{
+        background: rgba(255, 255, 255, 0.9);
     }
     .show-weather.previous-weather{
         
